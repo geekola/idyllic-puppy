@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #3e53a0;
+  --color-secondary: #eceef0;
+  --color-dark: #08112f;
+  --color-light: #ccd4de;
+  --color-accent: #323954;
+  --color-highlight: #5a77df;
+}
+
+@layer base {
+  html {
+    @apply text-sm; /* 14pt base font size */
+  }
+
+  body {
+    @apply font-sans bg-secondary dark:bg-dark text-dark dark:text-light;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-2xl; /* 24pt */
+  }
+
+  h2 {
+    @apply text-xl; /* 20pt */
+  }
+
+  h3 {
+    @apply text-lg; /* 18pt */
+  }
+
+  p {
+    @apply text-sm leading-relaxed; /* 14pt */
+  }
+
+  small, .text-small {
+    @apply text-xs; /* 12pt - smaller than body */
+  }
+
+  .footer-text {
+    @apply text-xs; /* 12pt - smaller than body */
+  }
+
+  input[type="checkbox"] {
+    @apply text-primary border-gray-300 rounded focus:ring-primary dark:border-gray-600 dark:bg-gray-700;
+  }
+
+  input[type="checkbox"]:checked {
+    @apply bg-primary border-primary;
+  }
+}
+
+@layer components {
+  .form-group {
+    @apply space-y-1 mb-4;
+  }
+
+  .form-error {
+    @apply text-xs text-red-600 dark:text-red-400 mt-1;
+  }
+
+  .form-helper {
+    @apply text-xs text-gray-500 dark:text-gray-400 mt-1;
+  }
+
+  .input-with-icon {
+    @apply block w-full pl-10 pr-3 py-2
+    text-sm
+    border border-gray-300 dark:border-gray-600
+    rounded-md
+    bg-white dark:bg-gray-700
+    text-gray-900 dark:text-white
+    placeholder-gray-500 dark:placeholder-gray-400
+    focus:ring-2 focus:ring-primary focus:border-primary
+    disabled:bg-gray-100 dark:disabled:bg-gray-800
+    disabled:text-gray-500 dark:disabled:text-gray-400
+    disabled:cursor-not-allowed;
+  }
+
+  .input-icon-wrapper {
+    @apply absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none;
+  }
+
+  .input-icon {
+    @apply h-5 w-5 text-gray-400;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium;
+  }
+
+  .button-text {
+    @apply text-sm font-medium;
+  }
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary dark:bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-highlight;
+}
