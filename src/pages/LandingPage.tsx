@@ -14,7 +14,7 @@ export function LandingPage() {
       title: 'Make Every Image An Event',
       subtitle: 'Turn Ordinary into Extraordinary',
       description: 'Struggling to engage your audience or create a winning marketing strategy? Spatial Mods is a perfect solution.',
-      image: '/images/auto-feature.png',
+      image: '../images/Picture1.gif',
       color: 'orange'
     },
     {
@@ -22,7 +22,7 @@ export function LandingPage() {
       title: 'Make Every Memory Eternal',
       subtitle: 'Your Most Cherished Memories',
       description: 'Capture your family\'s history and honor the memory of loved ones with Spatial Mods.',
-      image: '/images/family-feature.png',
+      image: '../images/Picture2.gif',
       color: 'blue'
     },
     {
@@ -30,7 +30,7 @@ export function LandingPage() {
       title: 'What Was Once Old Is Made New',
       subtitle: 'Legacy Reimagined',
       description: 'With Spatial Mods, you can breathe new life into your existing media library.',
-      image: '/images/space-feature.png',
+      image: '../images/Picture3.gif',
       color: 'purple'
     }
   ];
